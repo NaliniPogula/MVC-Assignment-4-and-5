@@ -1,0 +1,51 @@
+﻿@model HOL_4.Models.Account
+    @using HOL_4.Models
+
+
+@using (Html.BeginForm("CreateAccount", "Home"))
+{
+    @Html.ValidationSummary("Errors in account creation")
+    @Html.ValidationSummary("Errors in account creation")
+
+
+<p>
+    Account Number: @Html.TextBoxFor(a => a.AccountNumber)
+    @Html.ValidationMessageFor(a => a.AccountNumber)
+
+    @*@Html.ValidationMessageFor(a => a.AccountNumber)
+    @Html.ValidationMessageFor(a => a.Name)
+    @Html.ValidationMessageFor(a => a.CurrentBalance)*@
+
+</p>
+
+
+<p>
+    Name: @Html.TextBoxFor(a => a.Name)
+    @Html.ValidationMessageFor(a => a.Name)
+
+    @*@Html.ValidationMessageFor(a => a.AccountNumber)
+    @Html.ValidationMessageFor(a => a.Name)
+    @Html.ValidationMessageFor(a => a.CurrentBalance)*@
+
+</p>
+
+
+<p>
+    Current Balance: @Html.TextBoxFor(a => a.CurrentBalance)
+    @Html.ValidationMessageFor(a => a.CurrentBalance)
+
+    @*@Html.ValidationMessageFor(a => a.AccountNumber)
+    @Html.ValidationMessageFor(a => a.Name)
+    @Html.ValidationMessageFor(a => a.CurrentBalance)*@
+
+</p>
+
+    <input type="submit" value="Create Account" />
+}
+
+
+@{
+    ViewBag.Title = "Account";
+}
+
+<h2>Account</h2>
